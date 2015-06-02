@@ -1,0 +1,43 @@
+.reveal {
+	background: #2196F3;
+	color: #E3F2FD;
+	}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+	color: #E3F2FD;
+	}
+
+.text-left {
+	text-align: left;
+	}
+
+.reveal img {
+	border: none !important;
+	background: none !important;
+	box-shadow: none !important;
+	}
+
+.reveal a {
+	color: #2962FF;
+	}
+
+.reveal .progress span {
+	background: #0D47A1;
+	}
+
+.before {
+	box-shadow: 0 0 10px 2px red;
+	}
+
+.after {
+	box-shadow: 0 0 10px 2px green;
+	}
+
+pre {
+	font-size: 18px !important;
+	}
+
+pre + pre {
+	margin-top: 40px !important;
+	}
+
