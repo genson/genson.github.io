@@ -57,7 +57,7 @@ a {
 	display: inline-block;
 	vertical-align: middle;
 	padding: 6px;
-	border-color: #eee; /* ie8 fallback */
+	border: 1px solid #eee; /* ie8 fallback */
 	border: 1px solid rgba(0,0,0,.1);
 
 	background: #fff; /* ie8 fallback */
@@ -284,7 +284,7 @@ a {
 -------------------------------------------------- */
 
 .filters-block {
-	border-color: #eee; /* ie8 fallback */
+	border: 1px solid #eee; /* ie8 fallback */
 	border: 1px solid rgba(0,0,0,.1);
 	border-radius: 4px;
 
@@ -455,7 +455,7 @@ a {
 		}
 
 .content-filter {
-	border-color: #eee; /* ie8 fallback */
+	border-top: 1px solid #eee; /* ie8 fallback */
 	border-top: 1px solid rgba(0,0,0,.1);
 	padding-top: 15px;
 	margin-bottom: 40px;
@@ -513,7 +513,7 @@ a {
 
 
 		.content-filter_i.__border {
-			border-color: #eee; /* ie8 fallback */
+			border: 1px solid #eee; /* ie8 fallback */
 			border: 1px solid rgba(0,0,0,.1);
 			}
 
@@ -711,7 +711,7 @@ a {
 	margin: 20px 0;
 	border-radius: 10px;
 
-	border-color: #eee; /* ie8 fallback */
+	border: 1px solid #eee; /* ie8 fallback */
 	border: 1px solid rgba(0,0,0,.1);
 
 	color: #fff;
@@ -755,7 +755,7 @@ a {
 		display: inline-block;
 		border-radius: 4px;
 
-		border-color: #eee;
+		border: 1px solid #eee;
 		border: 1px solid rgba(0,0,0,.1);
 		padding: 0 12px;
 
@@ -1230,7 +1230,7 @@ a {
 ---------------------------------------------------------------------------------- */
 
 .widgets-panel {
-	border-color: #eee; /* ie8 fallback */
+	border-top: 1px solid #eee; /* ie8 fallback */
 	border-top: 1px solid rgba(0,0,0,.1);
 
 	background: #ddd; /* ie8 fallback */
@@ -1248,7 +1248,7 @@ a {
 		background: #fff; /* ie8 fallback */
 		background: rgba(255,255,255,.5);
 
-		border-color: #eee; /* ie8 fallback */
+		border: 1px solid #eee; /* ie8 fallback */
 		border: 1px solid rgba(0,0,0,.1);
 		border-radius: 4px;
 		}
@@ -1266,7 +1266,7 @@ a {
 ---------------------------------------------------------------------------------- */
 
 .footer {
-	border-color: #eee;
+	border-top: 1px solid #eee;
 	border-top: 1px solid rgba(0,0,0,.1);
 	padding: 20px 0;
 	background: #eee;
@@ -1397,7 +1397,7 @@ a {
 	}
 
 .bottom-panel .container {
-	border-color: #ddd;
+	border-top: 1px solid #eee;
 	border-top: 1px solid rgba(0,0,0,.1);
 	padding: 10px 0;
 	}
