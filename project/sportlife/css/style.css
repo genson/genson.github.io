@@ -327,6 +327,7 @@ a {
 				}
 
 		.filter_cnt {
+			white-space: nowrap;
 			}
 
 			.checkbox-lst {
@@ -361,11 +362,6 @@ a {
 				.it.__range {
 					width: 86px;
 					}
-
-					/* ie8 hack */
-					body:last-child .it.__range {
-						width: 85px;
-						}
 
 				.it-delimeter {
 					color: #999;
