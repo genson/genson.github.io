@@ -362,6 +362,11 @@ a {
 					width: 86px;
 					}
 
+					/* ie8 hack */
+					:root .it.__range {
+						width: 85px;
+						}
+
 				.it-delimeter {
 					color: #999;
 					margin: 0 10px;
