@@ -56,12 +56,10 @@ a {
 .it {
 	display: inline-block;
 	vertical-align: middle;
-	padding: 4px 6px 0;
+	padding: 6px;
 	border: 1px solid rgba(0,0,0,.1);
 	background: rgba(255,255,255,.5);
 	border-radius: 4px;
-
-	line-height: 26px;
 	}
 
 .btn {
@@ -936,7 +934,7 @@ a {
 
 					.good-info_count_it {
 						float: left;
-						line-height: 36px;
+						padding: 10px 0 9px;
 						border: 0;
 						border-right: 1px solid #dedede;
 						text-align: center;
