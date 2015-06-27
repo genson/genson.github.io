@@ -363,7 +363,7 @@ a {
 					}
 
 					/* ie8 hack */
-					:root .it.__range {
+					body:last-child .it.__range {
 						width: 85px;
 						}
 
