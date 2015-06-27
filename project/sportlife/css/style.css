@@ -1434,6 +1434,7 @@ a {
 	top: 270px;
 	right: 20px;
 	z-index: 1;
+	-webkit-backface-visibility: hidden;
 	}
 
 .fixed-widget {
@@ -1586,6 +1587,8 @@ a {
 
 	text-align: center;
 	cursor: pointer;
+
+	-webkit-backface-visibility: hidden;
 	}
 
 	.fixed-control .fa {
