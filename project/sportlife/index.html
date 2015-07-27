@@ -5,6 +5,7 @@
     <title>Sportlife</title>
     <link rel="stylesheet" href="./css/normalize.css"/>
     <link rel="stylesheet" href="./css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="./css/jquery.bxslider.css"/>
     <link rel="stylesheet" href="./css/style.css"/>
     <meta name="viewport" content="width=1150">
 </head>
@@ -13,7 +14,8 @@
         <div class="container">
             <a class="header-panel_logo" href="#333"></a>
             <div class="header-panel_search">
-                 <span class="header-panel_search_ic fa fa-search fa-lg"></span>
+                <span class="header-panel_search_ic fa fa-search fa-lg"></span>
+                <input class="header-panel_search_it" type="text" placeholder="Введите запрос"/>
             </div>
             <div class="header-panel_menu">
                 <a class="header-panel_menu_i" href="#444">Велосипеды</a>
@@ -58,13 +60,13 @@
     <div class="panel slider-panel">
         <div class="container">
             <div class="slider">
-                <div class="slider_ac">
-                    <i class="fa fa-arrow-circle-left fa-lg"></i>
-                </div>
-                <div class="slider_ac __right">
-                    <i class="fa fa-arrow-circle-right fa-lg"></i>
-                </div>
-                <div class="slider_cnt">
+                <!--<div class="slider_ac">-->
+                    <!--<i class="fa fa-arrow-circle-left fa-lg"></i>-->
+                <!--</div>-->
+                <!--<div class="slider_ac __right">-->
+                    <!--<i class="fa fa-arrow-circle-right fa-lg"></i>-->
+                <!--</div>-->
+                <!--<div class="slider_cnt">-->
                     <div class="slider_i">
                         <img src="http://placehold.it/145x75" alt=""/>
                     </div>
@@ -91,7 +93,7 @@
                     </div>
                 </div>
 
-            </div>
+            <!--</div>-->
         </div>
     </div>
 
@@ -128,9 +130,9 @@
                                     <label class="checkbox_label" for="check1">Author <span class="checkbox_label_count">(45)</span></label>
                                 </div>
 
-                                <div class="checkbox-lst_i">
-                                    <input class="checkbox_i" id="check2" type="checkbox"/>
-                                    <label class="checkbox_label" for="check2">Author <span class="checkbox_label_count">(45)</span></label>
+                                <div class="checkbox-lst_i __disabled">
+                                    <input class="checkbox_i" id="check2" type="checkbox" disabled/>
+                                    <label class="checkbox_label" for="check2">Disabled item <span class="checkbox_label_count">(45)</span></label>
                                 </div>
 
                                 <div class="checkbox-lst_i">
@@ -346,6 +348,9 @@
                     <img src="http://placehold.it/816x220" alt=""/>
                 </div>
 
+                <div>
+                    Просто кнопка <a href="#444" class="btn">Button</a>, неактивные кнопки <a href="#444" class="btn __disabled">Button</a> и <button class="btn" disabled>Кнопка</button>
+                </div>
 
                 <div class="paginator">
                     <div class="paginator_i __prev"><i class="fa fa-chevron-left"></i> Предыдущая</div>
@@ -615,6 +620,8 @@
     </div>
 
 </div>
-
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="./js/jquery.bxslider.min.js"></script>
+<script src="./js/main.js"></script>
 </body>
 </html>
