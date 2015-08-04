@@ -2,18 +2,18 @@ $(function () {
 
     //
     // header menu
-    var $headerPanel = $('.header-panel'),
-        headerPanelHeight = $headerPanel.height();
-
-    $(window).on('scroll', function(){
-        var $this = $(this);
-
-        if ($this.scrollTop() > headerPanelHeight) {
-            $('body').addClass('__fixed-header-panel');
-        } else {
-            $('body').removeClass('__fixed-header-panel');
-        }
-    });
+//    var $headerPanel = $('.header-panel'),
+//        headerPanelHeight = $headerPanel.height();
+//
+//    $(window).on('scroll', function(){
+//        var $this = $(this);
+//
+//        if ($this.scrollTop() > headerPanelHeight) {
+//            $('body').addClass('__fixed-header-panel');
+//        } else {
+//            $('body').removeClass('__fixed-header-panel');
+//        }
+//    });
 
     //
     // search like apple.com
@@ -22,14 +22,12 @@ $(function () {
         $searchField = $searchPanel.find('.header-panel_search_it');
 
     $searchToggler.on('click', function(){
-        $searchToggler.addClass('__hidden');
         $searchPanel.addClass('__focus');
         $searchField.focus();
     });
 
     $searchField.on('blur', function(){
         $searchPanel.removeClass('__focus');
-        $searchToggler.removeClass('__hidden');
     });
 
     //
@@ -39,6 +37,8 @@ $(function () {
         slideMargin: 10,
         pager: false,
         minSlides: 7,
-        maxSlides: 7
+        maxSlides: 7,
+        prevSelector: $('.js-prev'),
+        nextSelector: $('.js-next')
     });
 });

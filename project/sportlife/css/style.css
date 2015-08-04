@@ -19,6 +19,7 @@
 ---------------------------------------------------------------------------------- */
 
 body {
+	position: relative;
 	background: #f9f9f9 url(../i/texture.png);
 
 	font-family: "MyriadProRegular";
@@ -57,6 +58,17 @@ a {
 		display: table;
 		clear: both;
 		}
+
+.overlay {
+	position: absolute;
+	top: 60px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #eee; /* ie8 fallback */
+	background: rgba(0,0,0,.2);
+	z-index: 10;
+	}
 
 .it {
 	display: inline-block;
@@ -135,6 +147,11 @@ a {
 	background: #2e2e36 url(../i/texture_010.png);
 	}
 
+	.header-panel .container {
+		padding: 0;
+		line-height: 60px;
+		}
+
 	.__fixed-header-panel .header-panel {
 		position: fixed;
 		top: 0; left: 0;
@@ -154,6 +171,7 @@ a {
 		}
 
 	.header-panel_menu {
+		position: relative;
 		float: right;
 		}
 
@@ -168,7 +186,48 @@ a {
 				color: #316488;
 				}
 
-	.header-panel_search {
+		.header-panel_sub-menu {
+			position: absolute;
+			top: 100%;
+			right: 0;
+			z-index: 15; /* to overlap .overlay */
+
+			padding: 20px;
+
+			border-top: 4px solid #3599D9;
+			background: #fff;
+			border-radius: 0 0 5px 5px;
+
+			line-height: 1;
+			white-space: nowrap; /* не переносим колонки */
+			}
+
+			.header-panel_sub-menu_col {
+				display: inline-block;
+				vertical-align: top;
+				width: 172px;
+				padding: 0 20px;
+				
+				white-space: normal; /* reset inherit */
+				}
+
+				.header-panel_sub-menu_h {
+					font-weight: bold;
+					color: #2E2E36;
+					line-height: 1.5;
+					}
+
+				.header-panel_sub-menu_i {
+					display: block;
+					padding-top: 20px;
+					color: #666;
+					}
+					.header-panel_sub-menu_i:hover {
+						text-decoration: none;
+						color: #3599D9;
+						}
+
+.header-panel_search {
 		float: right;
 		}
 
@@ -179,29 +238,39 @@ a {
 			color: #fff;
 			transition: opacity .3s;
 			}
+			.header-panel_search_ic:hover {
+				color: #999;
+				}
 
-			.header-panel_search_ic.__hidden {
-				opacity: 0;
-				transition: opacity .1s
+			.header-panel_search.__focus .header-panel_search_ic {
+				position: relative;
+				right: -26px;
+
+				color: #999;
 				}
 
 		.header-panel_search_it {
 			display: inline-block;
 			vertical-align: middle;
 			width: 0;
-			padding: 0;
+			padding: 8px 0 4px 0;
 			margin-top: -2px;
 
 			background: transparent;
 			border: 0;
+			border-radius: 3px;
+			color: #999;
 
 			transition: background .3s, width .3s;
 			}
+			.header-panel_search_it:focus {
+				outline: none;
+				}
 
 			.header-panel_search.__focus .header-panel_search_it {
 				display: inline-block;
 				width: 150px;
-				padding: 2px 4px;
+				padding: 8px 10px 4px 30px;
 
 				background: #fff;
 				}
@@ -273,6 +342,39 @@ a {
 	position: relative;
 	height: 75px;
 	}
+
+	.slider_ac {
+		position: absolute;
+		top: 0;
+		left: -20px;
+		width: 20px;
+		height: 100%;
+
+		color: #d2d2d2;
+		}
+		.slider_ac:before {
+			content: '';
+			height: 100%;
+
+			display: inline-block;
+			vertical-align: middle;
+			}
+
+		.slider_ac.__right {
+			left: auto;
+			right: -20px;
+			}
+		.slider_ac:hover {
+			cursor: pointer;
+			color: #999;
+			}
+
+	.slider_w .bx-next,
+	.slider_w .bx-prev {
+		position: absolute;
+		top: 0; left: 0; right: 0; bottom: 0;
+		text-indent: -9999px;
+		}
 
 /* /slider */
 
