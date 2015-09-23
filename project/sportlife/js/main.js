@@ -30,6 +30,13 @@ $(function () {
         $searchPanel.removeClass('__focus');
     });
 
+
+    //
+    // demo modal
+    $(document).on('click', '.modal_close, .modal_overlay', function(){
+        $('.modal').removeClass('__active');
+    });
+
     //
     // brand slider
     $('.slider').bxSlider({

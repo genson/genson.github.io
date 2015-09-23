@@ -187,6 +187,8 @@ a {
 				}
 
 		.header-panel_sub-menu {
+			display: none; /* !temporary */
+			
 			position: absolute;
 			top: 100%;
 			right: 0;
@@ -1753,3 +1755,152 @@ a {
 
 
 /* /Fixed widgets */
+
+
+/* Modal
+-------------------------------------------------- */
+
+.modal {
+	position: fixed;
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: 100; /* to overlap all */
+
+	 /* hide by default */
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .5s, visibility .5s;
+
+	text-align: center;
+
+	background: #eee; /* ie8 fallback */
+	background: rgba(0,0,0,.2);
+	}
+	.modal:before {
+		content: '';
+		display: inline-block;
+		vertical-align: middle;
+		min-height: 100%;
+		}
+
+	.modal.__active {
+		opacity: 1;
+		visibility: visible;
+		}
+
+	.modal_overlay {
+		position: fixed;
+		top: 0; left: 0; right: 0; bottom: 0;
+		background: #eee; /* ie8 fallback */
+		background: rgba(0,0,0,.2);
+
+		cursor: pointer;
+		}
+
+	.modal_cnt {
+		position: relative;
+		z-index: 5;
+
+		display: inline-block;
+		vertical-align: middle;
+		padding: 35px;
+
+		text-align: left;
+
+		border-radius: 3px;
+		border: 1px solid #eee; /* fallback */
+		border: 1px solid rgba(0,0,0,.1);
+		background: #fff;
+		}
+
+		.modal_close {
+			position: absolute;
+			top: 5px; right: 5px;
+
+			font-size: 18px;
+			color: #ccc;
+			cursor: pointer;
+			}
+			.modal_close:hover {
+				color: #999;
+				}
+
+/* /Modal */
+
+
+/* Forms
+-------------------------------------------------- */
+
+.form {
+	position: relative;
+	}
+
+	.form_h {
+		margin-bottom: 30px;
+		text-align: center;
+		font-weight: bold;
+		font-size: 22px;
+
+		color: #1C1C25;
+		}
+
+	.form_i {
+		margin-bottom: 8px;
+		}
+
+	.form_actions {
+		margin-top: 30px;
+		text-align: center;
+		}
+
+		.form_actions .btn {
+			text-transform: uppercase;
+			}
+
+	
+/* Inside modal */
+
+.modal .form {
+	display: inline-block;
+	vertical-align: top;
+	}
+
+	.modal .form + .form {
+		margin-left: 60px;
+		}
+
+		.modal .form + .form:before {
+			content: '';
+			position: absolute;
+			left: -30px; /* half of margin-left  */
+			top: -35px; bottom: -35px; /* padding of modal */
+
+			display: block;
+			border-left: 1px dotted #eee;
+			}
+
+/* /Inside modal */
+	
+/* label */
+
+.label {
+	display: inline-block;
+	min-width: 80px;
+	}
+
+	.label_sup {
+		display: inline-block;
+		vertical-align: top;
+		color: #4780B8;
+		}
+
+/* /label */
+
+/* inputs */
+
+.form_i .it {
+	min-width: 225px;
+	}
+
+/* /inputs */
+
+/* /Forms */
