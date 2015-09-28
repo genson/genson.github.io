@@ -38,14 +38,34 @@ $(function () {
     });
 
     //
-    // brand slider
-    $('.slider').bxSlider({
-        slideWidth: 145,
-        slideMargin: 10,
-        pager: false,
-        minSlides: 7,
-        maxSlides: 7,
-        prevSelector: $('.js-prev'),
-        nextSelector: $('.js-next')
+    // accordion
+    $('.accordion_h').on('click', function() {
+        var $this = $(this);
+        $this.parent().toggleClass('__active');
     });
+
+    //
+    //demo payment
+    $(document).on('click','.form-widget_i_radio', function(){
+        var $this = $(this),
+            $wrapper = $this.closest('.grid');
+
+        $wrapper.find('.form-widget:not(.__disabled)').addClass('__disabled');
+        $this.closest('.form-widget').removeClass('__disabled');
+    });
+
+    //
+    // brand slider
+    var $slider =  $('.slider');
+    if ($slider.length) {
+        $slider.bxSlider({
+            slideWidth: 145,
+            slideMargin: 10,
+            pager: false,
+            minSlides: 7,
+            maxSlides: 7,
+            prevSelector: $('.js-prev'),
+            nextSelector: $('.js-next')
+        });
+    }
 });
