@@ -137,6 +137,22 @@ a {
 	float: left;
 	}
 
+.radio-list {
+	}
+
+	.radio-list_i {
+		display: block;
+		cursor: pointer;
+		}
+
+		.radio-list_i + .radio-list_i {
+			margin-top: 10px;
+			}
+
+		.radio-list_i input {
+			margin-right: 10px;
+			}
+
 /* /Base
 ---------------------------------------------------------------------------------- */
 
@@ -2193,6 +2209,10 @@ a {
 			background: #ECEDF4;
 			}
 
+		.form-widget_i.__no-padding {
+			padding: 5px 0;
+			}
+
 		.form-widget_i_tx {
 			float: left;
 			}
@@ -2208,7 +2228,6 @@ a {
 
 		.form-widget_i_radio {
 			display: block;
-			margin-left: -20px; /* .form-widget_i padding */
 			margin-bottom: 10px;
 			text-transform: uppercase;
 			cursor: pointer;
@@ -2224,6 +2243,55 @@ a {
 			text-align: center;
 			text-transform: uppercase;
 			}
+/* Inputs */
+
+.form-widget_i .label {
+	float: left;
+	width: 25%;
+	min-width: auto;
+	line-height: 33px;
+	}
+
+.form-widget_i .form-widget_it {
+	float: left;
+	width: 75%;
+	box-sizing: border-box;
+	}
+
+.form-widget_i .select {
+	max-width: 100%;
+	height: 33px;
+	}
+
+/* /Inputs */
+
+/* Address */
+
+.form-widget_address {
+	}
+
+	.form-widget_address .label,
+	.form-widget_address .it {
+		float: left;
+		width: 15%;
+		box-sizing: border-box;
+		}
+
+	.form-widget_address .label + .it,
+	.form-widget_address .it + .label {
+		margin-left: 2%;
+		}
+
+	.form-widget_address .label {
+		text-align: center;
+		}
+
+		.form-widget_address .label:first-child {
+			text-align: left;
+			}
+
+
+/* /Address */
 
 /* disabled */
 

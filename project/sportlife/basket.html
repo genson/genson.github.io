@@ -175,8 +175,15 @@
                         <div class="grid __three-col">
                             <div class="grid_i">
                                 <div class="form-widget __disabled">
-                                    <div class="form-widget_i">
+                                    <div class="form-widget_i __no-padding">
                                         <label class="form-widget_i_radio" for="type11"><input type="radio" name="delivery" id="type11"/>самовывоз</label>
+                                    </div>
+                                    <div class="form-widget_i __no-padding">
+                                        <div class="radio-list">
+                                            <label for="adress1" class="radio-list_i"><input type="radio" name="adress" id="adress1"/>Магазин Гражданский проспект</label>
+                                            <label for="adress2" class="radio-list_i"><input type="radio" name="adress" id="adress2"/>Другой магазин</label>
+                                            <label for="adress3" class="radio-list_i"><input type="radio" name="adress" id="adress3"/>Еще один</label>
+                                        </div>
                                     </div>
                                     <div class="form-widget_i  __highlight">
                                         <div class="form-widget_i_tx">
@@ -190,9 +197,35 @@
                             </div>
                             <div class="grid_i">
                                 <div class="form-widget">
-                                    <div class="form-widget_i">
+                                    <div class="form-widget_i __no-padding">
                                         <label class="form-widget_i_radio" for="type22"><input type="radio" name="delivery" id="type22" checked/>курьер</label>
                                     </div>
+                                    <div class="form-widget_i __no-padding">
+                                        <label class="label" for="city23">Город <span class="label_sup">*</span></label>
+                                        <select name="city" id="city23" class="select form-widget_it">
+                                            <option value="1">Санкт-Петербург</option>
+                                            <option value="1">Москва</option>
+                                            <option value="1">Нягонь</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-widget_i __no-padding">
+                                        <label class="label" for="index23">Индекс <span class="label_sup">*</span></label>
+                                        <input type="text" id="index23" class="it form-widget_it"/>
+                                    </div>
+                                    <div class="form-widget_i __no-padding">
+                                        <label class="label" for="street23">Улица <span class="label_sup">*</span></label>
+                                        <input type="text" id="street23" class="it form-widget_it"/>
+                                    </div>
+
+                                    <div class="form-widget_i __no-padding form-widget_address">
+                                        <label class="label" for="building">Дом <span class="label_sup">*</span></label>
+                                        <input type="text" id="building" class="it"/>
+                                        <label class="label" for="side">Корп </label>
+                                        <input type="text" id="side" class="it"/>
+                                        <label class="label" for="flat">Кв.</label>
+                                        <input type="text" id="flat" class="it"/>
+                                    </div>
+
                                     <div class="form-widget_i  __highlight">
                                         <div class="form-widget_i_tx">
                                             Итого
@@ -206,8 +239,32 @@
                             </div>
                             <div class="grid_i">
                                 <div class="form-widget __disabled">
-                                    <div class="form-widget_i">
+                                    <div class="form-widget_i __no-padding">
                                         <label class="form-widget_i_radio" for="type33"><input type="radio" name="delivery" id="type33"/>почта россии</label>
+                                    </div>
+                                    <div class="form-widget_i __no-padding">
+                                        <label class="label" for="city">Город <span class="label_sup">*</span></label>
+                                        <select name="city" id="city" class="select form-widget_it">
+                                            <option value="1">Санкт-Петербург</option>
+                                            <option value="1">Москва</option>
+                                            <option value="1">Нягонь</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-widget_i __no-padding">
+                                        <label class="label" for="index">Индекс <span class="label_sup">*</span></label>
+                                        <input type="text" id="index" class="it form-widget_it"/>
+                                    </div>
+                                    <div class="form-widget_i __no-padding">
+                                        <label class="label" for="street">Улица <span class="label_sup">*</span></label>
+                                        <input type="text" id="street" class="it form-widget_it"/>
+                                    </div>
+                                    <div class="form-widget_i __no-padding form-widget_address">
+                                        <label class="label" for="building2">Дом <span class="label_sup">*</span></label>
+                                        <input type="text" id="building2" class="it"/>
+                                        <label class="label" for="side2">Корп </label>
+                                        <input type="text" id="side2" class="it"/>
+                                        <label class="label" for="flat2">Кв.</label>
+                                        <input type="text" id="flat2" class="it"/>
                                     </div>
                                     <div class="form-widget_i  __highlight">
                                         <div class="form-widget_i_tx">
@@ -237,7 +294,7 @@
                         <div class="grid __three-col">
                             <div class="grid_i">
                                 <div class="form-widget __disabled">
-                                    <div class="form-widget_i">
+                                    <div class="form-widget_i __no-padding">
                                         <label class="form-widget_i_radio" for="type1"><input type="radio" name="payment" id="type1"/>наличными</label>
                                     </div>
                                     <div class="form-widget_i  __highlight">
@@ -252,7 +309,7 @@
                             </div>
                             <div class="grid_i">
                                 <div class="form-widget">
-                                    <div class="form-widget_i">
+                                    <div class="form-widget_i __no-padding">
                                         <label class="form-widget_i_radio" for="type2"><input type="radio" name="payment" id="type2" checked/>банковской картой</label>
                                     </div>
                                     <div class="form-widget_i  __highlight">
@@ -268,7 +325,7 @@
                             </div>
                             <div class="grid_i">
                                 <div class="form-widget __disabled">
-                                    <div class="form-widget_i">
+                                    <div class="form-widget_i __no-padding">
                                         <label class="form-widget_i_radio" for="type3"><input type="radio" name="payment" id="type3"/>квитанцией сбербанка</label>
                                     </div>
                                     <div class="form-widget_i  __highlight">
