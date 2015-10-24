@@ -45,7 +45,7 @@ $(function () {
     });
 
     //
-    //demo payment
+    // demo payment
     $(document).on('click','.form-widget_i_radio', function(){
         var $this = $(this),
             $wrapper = $this.closest('.grid');
@@ -68,4 +68,31 @@ $(function () {
             nextSelector: $('.js-next')
         });
     }
+
+
+    //
+    // demo main slider
+    var $mainSlider = $('.main-slider'),
+        $sliderWrapper = $mainSlider.find('.main-slider_cnt'),
+        $slides = $sliderWrapper.find('.main-slider_i'),
+
+        $sliderNav = $('.main-slider_nav'),
+        $sliderNavItem = $sliderNav.find('.main-slider_nav_i'),
+
+        CSS_CLASS_ACTIVE = "__active"
+        ;
+
+
+    $sliderNav.on('click', '.main-slider_nav_i', function(){
+        var $this = $(this),
+            indexOfSlide = $this.index();
+
+        $sliderNavItem.removeClass(CSS_CLASS_ACTIVE);
+        $this.addClass(CSS_CLASS_ACTIVE);
+
+        $slides
+            .removeClass(CSS_CLASS_ACTIVE)
+            .eq(indexOfSlide).addClass(CSS_CLASS_ACTIVE);
+    });
+
 });
