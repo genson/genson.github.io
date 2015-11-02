@@ -211,7 +211,7 @@ a {
 			right: 0;
 			z-index: 15; /* to overlap .overlay */
 
-			padding: 20px;
+			padding: 20px 20px 40px;
 
 			border-top: 4px solid #3599D9;
 			background: #fff;
@@ -231,8 +231,11 @@ a {
 				}
 
 				.header-panel_sub-menu_h {
+					display: block;
+					padding-bottom: 20px;
 					font-weight: bold;
 					color: #2E2E36;
+					font-size: 15px;
 					line-height: 1.5;
 					}
 
@@ -240,11 +243,20 @@ a {
 					display: block;
 					padding-top: 20px;
 					color: #666;
+					font-size: 15px;
 					}
 					.header-panel_sub-menu_i:hover {
 						text-decoration: none;
 						color: #3599D9;
 						}
+					.header-panel_sub-menu_i:first-child{
+						padding-top: 0;
+						}
+
+					.header-panel_sub-menu_h + .header-panel_sub-menu_i {
+						padding-top: 0;
+						}
+
 
 .header-panel_search {
 		float: right;
