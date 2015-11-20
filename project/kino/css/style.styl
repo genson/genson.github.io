@@ -1,0 +1,643 @@
+/* Variables
+---------------------------------------------------------------------------------- */
+
+$borderColor = #e9e9e9;
+$blueColor = #034ade;
+
+$mainCloumnWidth = 730px;
+$sidebarWidth = 230px;
+
+$progressNeutralColor = #adadad;
+$progressPositiveColor = #66cc33;
+$progressNegativeColor = #f00;
+
+//
+// clearfix - modern way
+clearfix() {
+	&:before,
+	&:after {
+		content: '';
+		display: table;
+		}
+
+	&:after {
+		clear: both;
+		}
+	}
+
+/* /Variables
+---------------------------------------------------------------------------------- */
+
+
+/* Base
+---------------------------------------------------------------------------------- */
+
+body {
+	position: relative;
+	background: #f9f8f7;
+
+	font-size: 14px;
+	line-height: 1.5;
+	color: #000;
+	}
+
+a {
+	color: #999;
+	text-decoration: none;
+	}
+	a:hover {
+		text-decoration: underline;
+		}
+	
+.clearfix {
+	clearfix();
+	}	
+
+.container {
+	clearfix();
+	position: relative;
+	padding: 20px;
+	width: 1020px;
+	box-sizing: border-box;
+	margin-left: auto;
+	margin-right: auto;
+
+	background: #fff;
+	}
+
+.table {
+	border-collapse: collapse;
+	}
+
+	.table td {
+		padding: 15px 10px;
+		}
+
+	.table tr:nth-child(even) {
+		background: #f9f9f9;
+		}
+
+.c-blue {
+	color: #2475af;
+	}
+
+.f-right {
+	float: right;
+	}
+
+.f-left {
+	float: left;
+	}
+
+/* Header */
+
+.header {
+	position: relative;
+	margin-bottom: 20px;
+	font-size: 16px;
+	line-height: 1;
+
+	&.__border {
+		padding-bottom: 10px;
+		border-bottom: 1px solid $borderColor;
+		}
+	}
+
+	.header_ac {
+		position: absolute;
+		top: 0;
+		right: 0;
+		}
+
+		.header_ac_i {
+			display: inline-block;
+			margin-left: 10px;
+
+			border-bottom: 3px solid transparent;
+			padding: 0px 2px 9px;
+			font-size: 14px;
+
+			&:hover {
+				cursor: pointer
+				}
+				
+			&:hover,
+			&.__active {
+				border-bottom-color: $blueColor;
+				text-decoration: none;
+				}
+			}
+
+/* /Header */
+
+.info-block {
+	padding: 20px;
+	margin-bottom: 20px;
+	background: #f6f6f6;
+	}
+
+
+/* /Base
+---------------------------------------------------------------------------------- */
+
+
+/* Header
+---------------------------------------------------------------------------------- */
+
+.navigation {
+	background: #fff;
+	}
+
+.header-menu {
+	clearfix();
+
+	padding: 0;
+	}
+	
+	.header-menu_i {
+		float: left;
+		margin-right: 20px;
+		border-bottom: 3px solid transparent;
+		padding: 0 2px;
+
+		line-height: 58px;
+		color: #aaa;
+
+		&:hover,
+		&.__active {
+			color: #000;
+			border-bottom-color: $blueColor;
+			text-decoration: none;
+			}
+		}
+
+/* /Header
+---------------------------------------------------------------------------------- */
+
+/* Cover
+---------------------------------------------------------------------------------- */
+
+.cover {
+	position relative;
+	height: 460px;
+	margin-bottom: -220px;
+
+	background: url(../i/cover.jpg) 50% 0 no-repeat;
+	border-bottom: 5px solid $blueColor;
+	}
+
+/* /Cover
+---------------------------------------------------------------------------------- */
+
+/* Main info
+---------------------------------------------------------------------------------- */
+
+.main-info {
+	margin-bottom: 20px;
+	margin-top: 40px;
+	}
+
+
+.poster {
+	margin-bottom: 10px;
+	}
+
+	.poster_img {
+		width: 100%;
+		}
+
+.name {
+	line-height: 1.3;
+	margin-bottom: 20px;
+	}
+
+	.name_ru {
+		font-size: 28px;
+		}
+
+	.name_original {
+		color: #999;
+		}
+
+.film-data {
+	float: left;
+	}
+
+	.film-data_i {
+		margin-bottom: 5px;
+		}
+
+		.film-data_name {
+			display: inline-block;
+			width: 180px; 
+			color: #999;
+			}
+
+		.film-data_value {
+			display: inline-block
+			width: 240px;
+			color: #333;
+			}
+
+.persons {
+	width: 230px;
+	padding: 0 10px;
+	float: right;
+	}
+	
+.persons_section {
+	margin-bottom: 20px;
+	}
+
+	.persons_h {
+		color: #999;
+		margin-bottom: 10px;
+		}
+
+	.persons_i {
+		margin-bottom: 10px;
+		}
+
+		.persons_img {
+			float: left;
+			margin-right: 10px;
+			border-radius: 50%;
+			}
+		
+		.person_name {
+			line-height: 40px;
+			color: #333;
+			}
+
+/* Marks
+-------------------------------------------------- */
+
+.marks {
+	background: $blueColor;
+	padding: 16px;
+
+	color: #fff;
+	}
+
+
+	.marks_rating {
+		clearfix();
+		}
+
+		.marks_rating_tx {
+			float: left;
+			}
+
+		.marks_rating_count {
+			float: right;
+			margin-right: 3px;
+			opacity: .5;
+			}
+
+
+		.marks_stars {
+			padding-top: 5px;
+			clear: both;
+			}
+
+			for num in (1..10) {
+				.marks_stars.__{num} .marks_stars_i:nth-child(-n+{num}) {
+					opacity: 1;
+					}
+				}
+
+			.marks_stars_i {
+				display: inline-block;
+				width: 16px;
+				height: 16px;
+				background: url(../i/star.png) 50% no-repeat;
+
+				opacity: .5;
+				}
+
+/* /Marks */
+
+/* /Main info
+---------------------------------------------------------------------------------- */
+
+
+/* Content
+---------------------------------------------------------------------------------- */
+
+.main {
+	float: left;
+	width: $mainCloumnWidth;
+	margin-left: 20px;
+	}
+	
+.sidebar {
+	float: left;
+	width: $sidebarWidth;
+	}	
+
+
+/* Photos
+-------------------------------------------------- */
+
+.photos {
+	margin-bottom: 20px;
+	}
+
+	.photos_i {
+		display: block;
+		width: 100%;
+		}
+
+	.photos_thumbnails {
+		clearfix();
+		}
+
+		.photos_thumbnails_i {
+			float: left;
+			}
+
+		.photos_thumbnails_more {
+			float: left;
+			width: 84px;
+
+			line-height: 42px;
+			
+			text-align: center;
+			background: $blueColor;
+			color: #fff;
+			}
+
+/* /Photos */
+
+
+/* News
+-------------------------------------------------- */
+
+.news {
+
+	}
+
+.news_i {
+	position: relative;
+	padding-left: 68px;
+	padding-bottom: 20px;
+
+	margin-top: 20px;
+	border-bottom: 1px solid $borderColor;
+
+
+	&:last-child {
+		border-bottom: 0;
+		}
+	}
+
+	.news_img {
+		position: absolute;
+		left: 0; top: 0;
+		}
+
+	.news_date {
+		font-size: 12px;
+		color: #888;
+		}
+
+/* /News */
+
+/* Collage
+-------------------------------------------------- */
+
+.collage {
+	clearfix();
+	
+	&.__films {
+		margin-bottom: 20px;
+		}
+	}
+
+.collage_i {
+	float: left;
+	width: 230px;
+
+	.collage.__films & {
+		width: 130px;
+		}
+
+	& + & {
+		margin-left: 20px;
+		}
+	}
+
+.collage_info {
+	font-size: 12px;
+	color: #888;
+	}
+
+/* /Collage */
+
+/* Trailer
+-------------------------------------------------- */
+
+.trailer {
+	margin-bottom: 20px;
+
+	object {
+		width: $mainCloumnWidth;
+		height: 412px;
+		}
+
+	}
+
+
+
+/* /Trailer */
+
+/* Reveiw
+-------------------------------------------------- */
+
+.review-overview {
+	position: relative;
+	margin-bottom: 20px;
+	}
+
+/* Progress */
+
+.progress {
+	font-size: 12px;
+	}
+
+	.progress_label,
+	.progress_line,
+	.progress_count {
+		display: inline-block;
+		vertical-align: middle;
+		}
+
+	.progress_label {
+		width: 100px;
+		}
+
+	.progress_line {
+		height: 4px;
+		margin: 0 8px;
+		background: $progressNeutralColor;
+		
+		&.__positive {
+			background: $progressPositiveColor;
+			}
+
+		&.__negative {
+			background: $progressNegativeColor;
+			}
+		}
+
+/* /Progress */
+
+/* Widget */
+
+.review-widget {
+	position: relative;
+	float: left;
+	box-sizing: border-box;
+	width: (($mainCloumnWidth - 20 ) / 2);
+	padding: 20px;
+
+	background: #f6f6f6;
+
+	& + & {
+		margin-left: 20px;
+		}
+	}
+
+	.review-widget_h {
+		clearfix();
+		margin-bottom: 20px;
+		line-height: 1.3;
+		}
+		
+		.review-widget_img {
+			float: left;
+			margin-right: 10px;
+			}
+			
+		.review-widget_journal {
+			padding-top: 5px;
+			}	
+
+		.review-widget_n {
+			font-size: 12px;
+			color: #999;
+			}
+
+	.review-widget_ic {
+		position: absolute;
+		top: 20px; right: 20px;
+
+		width: 30px;
+		height: 30px;
+		background: url(../i/positive.png) 50% no-repeat;
+
+		.review-widget.__negative & {
+			background: url(../i/negative.png) 50% no-repeat;
+			}
+		}
+
+/* /Widget */
+
+
+/* List */
+
+.review-list {
+	margin-top: 20px;
+	}
+
+.review-list-item {
+	position: relative;
+	padding: 0 20px 20px;
+	font-size: 12px;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0; left: 0;
+
+		display: block;
+		width: 4px;
+		height: 42px;
+
+		background: $progressNeutralColor;
+		}
+
+	&.__positive:before {
+		background: $progressPositiveColor;
+		}
+
+	&.__negative:before {
+		background: $progressNegativeColor;
+		}
+	}
+
+	.review-list-item_h {
+		clearfix();
+		margin-bottom: 20px;
+		line-height: 1.3;
+		}
+
+		.review-list-item_date {
+			color: #999;
+			}
+			
+	.review-list-item_img {
+		float: left;
+		border-radius: 50%;
+		margin-right: 10px;
+		}			
+
+	.review-list-item_n {
+		padding-top: 5px;
+		font-size: 14px;
+		}		
+			
+	.review-list-item_tx {
+
+		}
+
+	.review-list-item_ac {
+		margin-top: 10px;
+		}
+
+		.review-list-item_ac_i {
+			display: inline-block;
+			margin-right: 20px;
+			color: #666;
+			}
+/* /List */
+
+/* /Reveiw */
+
+/* /Content
+---------------------------------------------------------------------------------- */
+
+/* Footer
+---------------------------------------------------------------------------------- */
+
+
+.footer {
+	border-top: 1px solid $borderColor;
+	}
+
+/* Social links
+-------------------------------------------------- */
+
+.subscribe {
+	float: right;
+	}
+
+/* /Social links */
+
+
+.copyright {
+	border-top: 1px solid $borderColor;
+	}
+
+/* /Footer
+---------------------------------------------------------------------------------- */
